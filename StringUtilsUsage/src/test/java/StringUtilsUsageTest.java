@@ -1,12 +1,12 @@
+import org.apache.commons.lang3.ArrayUtils;
 import org.apache.commons.lang3.StringUtils;
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import static org.junit.Assert.*;
 /**
- * ref-link: https://commons.apache.org/proper/commons-lang/apidocs/org/apache/commons/lang3/StringUtils.html#mid-java.lang.String-int-int-
+ * ref-link: https://commons.apache.org/proper/commons-lang/apidocs/org/apache/commons/lang3/StringUtils.html
  * Created by nickChenyx on 2017/4/7.
  */
 
@@ -138,5 +138,32 @@ public class StringUtilsUsageTest {
         assertEquals("https://",StringUtils.left(url,8));
         assertEquals("ns-lang/",StringUtils.right(url,8));
         assertEquals("commons.",StringUtils.mid(url,8,8));
+    }
+
+    /**
+     * split() 不操作入参
+     *  / 默认使用空格分开
+     *  / 可以设置分隔符，以及分割的最大次数、
+     *
+     * join() 直接操作入参
+     *
+     */
+    @Test
+    public void testSplitAndJoin(){
+        System.out.println("==========testSplitAndJoin==============");
+        System.out.println("==========testSplit=====================");
+        String url = "https://commons.apache.org/proper/commons-lang/";
+
+        System.out.println(ArrayUtils.toString(StringUtils.split(url)));
+        System.out.println(ArrayUtils.toString(StringUtils.split(url,"/")));
+        System.out.println(ArrayUtils.toString(StringUtils.split(url,"/",3)));
+
+        System.out.println("==========testJoin======================");
+        String[] split = StringUtils.split(url,"/");
+        System.out.println("raw_string: "+ArrayUtils.toString(split));
+        System.out.println(StringUtils.join(split));
+        System.out.println(StringUtils.join(split,"/"));
+        System.out.println(StringUtils.join(split,"-",1,4));
+
     }
 }
