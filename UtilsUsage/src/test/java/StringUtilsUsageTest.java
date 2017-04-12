@@ -14,10 +14,8 @@ import static org.junit.Assert.*;
  * StringUtils的详解
  * http://maplebb.blog.51cto.com/2547849/1843269
  */
-@RunWith(SpringJUnit4ClassRunner.class)
-// 一定要提供的配置文件 ！
-@ContextConfiguration(classes = BeanHub.class)
-public class StringUtilsUsageTest {
+
+public class StringUtilsUsageTest extends BaseTest{
     /**
      * 缩短字符串
      */
