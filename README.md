@@ -5,4 +5,4 @@
   
 *latest update:2017-4-12 19:25:19*
 - add UtilsUsage dir  
-[Something about interned string](/Something about interned string.md)
+- [Something about interned string](/Something_about_interned_string.md)
