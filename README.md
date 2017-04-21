@@ -4,6 +4,7 @@
 
   
 *latest update:2017-4-20 18:14:30*
+- model multi-thread:synchronized chapter3 not finish
 - model multi-thread:synchronized chapter2 
 - add model multi-thread
 - add UtilsUsage dir  
