@@ -3,6 +3,8 @@ package chapter2.t9_innerTest2;
 import static org.junit.Assert.*;
 
 /**
+ * 如果T3先获得锁，那么T1就要等待了；反之亦然。
+ * 可以发现synchronized监视的对象的锁被synchronized获取了。
  * @author nickChen
  * @create 2017-04-20 18:04.
  */

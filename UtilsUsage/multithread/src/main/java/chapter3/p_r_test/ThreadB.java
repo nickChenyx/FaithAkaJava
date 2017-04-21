@@ -1,0 +1,20 @@
+package chapter3.p_r_test;
+
+/**
+ * @author nickChen
+ * @create 2017-04-21 15:04.
+ */
+public class ThreadB extends Thread {
+    private C c;
+
+    public ThreadB(C c) {
+        this.c = c;
+    }
+
+    @Override
+    public void run() {
+        while(true){
+            c.getValue();
+        }
+    }
+}
