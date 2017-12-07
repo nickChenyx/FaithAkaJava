@@ -1,4 +1,4 @@
-package com.nickchen.chapter03;
+package com.nickchen.N08;
 
 /**
  * equals 方法实现了等价关系：
@@ -9,7 +9,7 @@ package com.nickchen.chapter03;
  * - 对于任何非null的引用值x，x.equals(null) 必须返回false
  *
  * @author nickChen
- * @create 2017-07-25 10:47.
+ * 2017-07-25 10:47.
  */
 public class OverrideEqualsGeneralContract {
     private final String test = "ttt";
